@@ -1,0 +1,96 @@
+{
+  "h1": "Documen­tation",
+  "p1": "Find out about Flow’s features, controls, keyboard shortcuts, and API. If you still need help, don’t hesitate to ask us",
+  "global-keyboard-shortcuts": {
+    "title": "App Keyboard Shortcuts",
+    "description": "Capture Note comes with a useful global keyboard shortcuts.",
+    "capture-sceen": {
+      "title": "Capture Screen",
+      "description": "You can take a screenshot of the entire screen using the global shorcut",
+      "short-cut": {
+        "mac": "⌥(Alt) + P",
+        "win": "Alt + P"
+      }
+    },
+    "capture-selected-portion": {
+      "title": "Capture Selected Portion",
+      "description": "You can take a screenshot of the selected portion using the global shorcut",
+      "short-cut": {
+        "mac": "⌥(Alt) + Shift + P",
+        "win": "Alt + Shift + P"
+      }
+    },
+    "open-image": {
+      "title": "Open Image",
+      "description": "You can open image using the global shorcut",
+      "short-cut": {
+        "mac": "⌥(Alt) + O",
+        "win": "Alt + O"
+      }
+    }
+  },
+  "page-keyboard-shortcuts": {
+    "title": "Page Keyboard Shortcuts",
+    "description": "Capture Note comes with a useful keyboard shortcuts for editing the page(Image and Notes)",
+    "save-page": {
+      "title": "Save Page",
+      "description": "You can save page(Image and Notes) as single image file",
+      "short-cut": {
+        "mac": "⌘(Cmd) + S",
+        "win": "Ctrl + S"
+      }
+    },
+    "copy-page-to-clipboard": {
+      "title": "Copy To Clipboard",
+      "description": "You can copy page(Image and Notes) to the clipboard",
+      "short-cut": {
+        "mac": "⌘(Cmd) + C",
+        "win": "Ctrl + C"
+      }
+    },
+    "clear-and-close-page": {
+      "title": "Close the page",
+      "description": "You can clear the image and notes and close app",
+      "short-cut": {
+        "mac": "⌘(Cmd) + W",
+        "win": "Ctrl + W"
+      }
+    }
+  },
+  "note-keyboard-shortcuts": {
+    "title": "Note Keyboard Shortcut",
+    "description": "Capture Note comes with a useful keyboard shortcuts for editing the notes",
+    "add-note": {
+      "title": "Add Note",
+      "description": "You can add a new note using the shortcut",
+      "short-cut": {
+        "mac": "⌘(Cmd) + Return",
+        "win": "Ctrl + Enter"
+      }
+    },
+    "move-note": {
+      "title": "Move Note",
+      "description": "When there is no text, you can move notes",
+      "short-cut": {
+        "mac": "⌥(Alt) + Arror",
+        "win": "Alt + Arror"
+      }
+    },
+    "delete-note": {
+      "title": "Delete Note",
+      "description": "You can delete focused note with the following key",
+      "short-cut": {
+        "mac": "⌘(Cmd) + W",
+        "win": "Ctrl + W"
+      }
+    },
+    "escape-note": {
+      "title": "Escacpe Note",
+      "description": "You can finish editing a note with the following key",
+      "short-cut": {
+        "mac": "Escape or Tab",
+        "win": "Escape or Tab"
+      }
+    }
+  }
+}
