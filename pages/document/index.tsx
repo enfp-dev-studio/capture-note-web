@@ -13,7 +13,7 @@ type DocumentItem = {
 
 const documentItems: DocumentItem[] = documentKeys;
 
-const DocumentItems = ({ os }) => {
+const DocumentItems = ({ os }: { os: string }) => {
   const { t } = useTranslation("document");
   return (
     <div className="w-full flex flex-col">
