@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*! Devices.css v0.2.0 | MIT License | github.com/picturepan2/devices.css */
+.device,
+.device::before,
+.device::after,
+.device *,
+.device *::before,
+.device *::after {
+  box-sizing: border-box;
+  display: block;
+}
+
+.device {
+  position: relative;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.device .device-frame {
+  z-index: 1;
+}
+
+.device .device-screen {
+  background-color: #000;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+}
+
+.device-macbook {
+  height: 432px;
+  width: 740px;
+}
+
+.device-macbook .device-frame {
+  background: #0d0d0d;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 2px #c8cacb;
+  height: 428px;
+  margin: 0 auto;
+  padding: 29px 19px 39px 19px;
+  position: relative;
+  width: 614px;
+}
+
+.device-macbook .device-frame::after {
+  background: #272727;
+  border-radius: 0 0 20px 20px;
+  bottom: 2px;
+  content: "";
+  height: 26px;
+  left: 2px;
+  position: absolute;
+  width: 610px;
+}
+
+.device-macbook .device-frame::before {
+  bottom: 10px;
+  color: #c8cacb;
+  content: "MacBook";
+  font-size: 12px;
+  height: 16px;
+  left: 50%;
+  line-height: 16px;
+  margin-left: -100px;
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  z-index: 1;
+}
+
+.device-macbook .device-screen {
+  border: 2px solid #121212;
+  border-radius: 2px;
+  height: 360px;
+  width: 576px;
+}
+
+.device-macbook .device-power {
+  background: #e2e3e4;
+  border: solid #d5d6d8;
+  border-radius: 2px 2px 0 0;
+  border-width: 0 4px;
+  height: 4px;
+  margin-top: -10px;
+  position: relative;
+  width: 740px;
+  z-index: 9;
+}
+
+.device-macbook .device-power::after,
+.device-macbook .device-power::before {
+  content: "";
+  position: absolute;
+}
+
+.device-macbook .device-power::after {
+  background: radial-gradient(
+    circle at center,
+    #e2e3e4 0,
+    #e2e3e4 85%,
+    #a0a3a7 100%
+  );
+  border: solid #adb0b3;
+  border-width: 0 2px;
+  height: 4px;
+  left: 50%;
+  margin-left: -60px;
+  width: 120px;
+}
+
+.device-macbook .device-power::before {
+  background: #a0a3a7;
+  border-radius: 0 0 180px 180px/ 0 0 10px 10px;
+  box-shadow: inset 0 -2px 6px 0 #474a4d;
+  height: 10px;
+  left: -4px;
+  margin: 0 auto;
+  top: 4px;
+  width: 740px;
+}
+
+.device-macbook.device-gold .device-frame {
+  box-shadow: inset 0 0 0 2px #edccb4;
+}
+
+.device-macbook.device-gold .device-power {
+  background: #f7e8dd;
+  border-color: #edccb4;
+}
+
+.device-macbook.device-gold .device-power::after {
+  background: radial-gradient(
+    circle at center,
+    #f7e8dd 0,
+    #f7e8dd 85%,
+    #dfa276 100%
+  );
+  border-color: #e4b08a;
+}
+
+.device-macbook.device-gold .device-power::before {
+  background: #edccb4;
+  box-shadow: inset 0 -2px 6px 0 #83491f;
+}
+
+.device-macbook.device-rosegold .device-frame {
+  box-shadow: inset 0 0 0 2px #f6a69a;
+}
+
+.device-macbook.device-rosegold .device-power {
+  background: #facfc9;
+  border-color: #f6a69a;
+}
+
+.device-macbook.device-rosegold .device-power::after {
+  background: radial-gradient(
+    circle at center,
+    #facfc9 0,
+    #facfc9 85%,
+    #ef6754 100%
+  );
+  border-color: #f6a69a;
+}
+
+.device-macbook.device-rosegold .device-power::before {
+  background: #f6a69a;
+  box-shadow: inset 0 -2px 6px 0 #851b0c;
+}
+
+.device-macbook.device-spacegray .device-frame {
+  box-shadow: inset 0 0 0 2px #767a7d;
+}
+
+.device-macbook.device-spacegray .device-power {
+  background: #909496;
+  border-color: #767a7d;
+}
+
+.device-macbook.device-spacegray .device-power::after {
+  background: radial-gradient(
+    circle at center,
+    #909496 0,
+    #909496 85%,
+    #515456 100%
+  );
+  border-color: #5d6163;
+}
+
+.device-macbook.device-spacegray .device-power::before {
+  background: #515456;
+  box-shadow: inset 0 -2px 6px 0 black;
+}

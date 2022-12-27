@@ -1,28 +1,39 @@
-import React from "react"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { GetServerSideProps } from "next"
-import Button from "../components/Button"
-import Feature from "../components/Feature"
-import ImageDescrptionContainer from "../components/ImageAndDescriptionBox"
+import React from "react";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useRouter } from "next/router";
+import { GetServerSideProps } from "next";
+import Button from "../components/Button";
+import Feature from "../components/Feature";
+import ImageDescrptionContainer from "../components/ImageAndDescriptionBox";
 
-type Props = {}
+type Props = {};
 
 const Home = (props: Props) => {
-  const { t } = useTranslation("home")
+  const router = useRouter();
+  const { t } = useTranslation("home");
 
   return (
     <>
       <div className="self-center mt-28">
         <div className="container mt-20 my-8">
-          <h1 className="mx-auto max-w-4xl text-5xl font-black self-center text-center leading-[1.2em]">{t("h1")}</h1>
-          <p className="mx-auto max-w-3xl text-2xl text-center leading-16 mt-8 !important">
+          <h1 className="mx-auto max-w-4xl text-5xl font-black self-center text-center leading-[1.2em]">
+            {t("h1")}
+          </h1>
+          <p className="mx-auto max-w-3xl text-2xl text-center leading-16 mt-8 !important opacity-70">
             {t("h1-p")}
-            {/* Flow is a minimalistic pomodoro based focus timer. Increase your productivity and reduce stress at the same time. */}
           </p>
         </div>
       </div>
-      <div className="container mt-28">
+      <Button
+        onClick={() => {
+          router.push("/download");
+        }}
+      >
+        Get started
+      </Button>
+
+      {/* <div className="container mt-28">
         <div className="flex flex-row justify-center gap-12 h-24">
           <div className="self-center">
             <Button
@@ -35,16 +46,19 @@ const Home = (props: Props) => {
           </div>
           <p className="self-center">Get Capture Note free</p>
         </div>
-      </div>
+      </div> */}
       <div className="container max-w-5xl mt-28 mx-auto">
         <Feature></Feature>
         <ImageDescrptionContainer
           content={
             <div className="my-auto">
-              <div className="text-3xl font-bold">Block apps or websites to prevent distractions</div>
+              <div className="text-2xl font-bold">
+                Block apps or websites to prevent distractions
+              </div>
               <div className="text-lg leading-7 mt-8">
-                Flow allows you to easily block apps on your Mac so you won’t get distracted at work. And with Flow Pro you can even block websites.{" "}
-                <br></br>Want to block websites? Check out Flow PRO.16
+                Flow allows you to easily block apps on your Mac so you won’t
+                get distracted at work. And with Flow Pro you can even block
+                websites. <br></br>Want to block websites? Check out Flow PRO.16
               </div>
             </div>
           }
@@ -54,10 +68,13 @@ const Home = (props: Props) => {
         <ImageDescrptionContainer
           content={
             <div className="my-auto">
-              <div className="text-3xl font-bold">Block apps or websites to prevent distractions</div>
+              <div className="text-2xl font-bold">
+                Block apps or websites to prevent distractions
+              </div>
               <div className="text-lg leading-7 mt-8">
-                Flow allows you to easily block apps on your Mac so you won’t get distracted at work. And with Flow Pro you can even block websites.{" "}
-                <br></br>Want to block websites? Check out Flow PRO.
+                Flow allows you to easily block apps on your Mac so you won’t
+                get distracted at work. And with Flow Pro you can even block
+                websites. <br></br>Want to block websites? Check out Flow PRO.
               </div>
             </div>
           }
@@ -67,10 +84,13 @@ const Home = (props: Props) => {
         <ImageDescrptionContainer
           content={
             <div className="my-auto">
-              <div className="text-3xl font-bold">Block apps or websites to prevent distractions</div>
+              <div className="text-2xl font-bold">
+                Block apps or websites to prevent distractions
+              </div>
               <div className="text-lg leading-7 mt-8">
-                Flow allows you to easily block apps on your Mac so you won’t get distracted at work. And with Flow Pro you can even block websites.{" "}
-                <br></br>Want to block websites? Check out Flow PRO.
+                Flow allows you to easily block apps on your Mac so you won’t
+                get distracted at work. And with Flow Pro you can even block
+                websites. <br></br>Want to block websites? Check out Flow PRO.
               </div>
             </div>
           }
@@ -79,13 +99,15 @@ const Home = (props: Props) => {
         ></ImageDescrptionContainer>
       </div>
     </>
-  )
-}
+  );
+};
 
-export const getServerSideProps: GetServerSideProps<Props> = async ({ locale }) => ({
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  locale,
+}) => ({
   props: {
     ...(await serverSideTranslations(locale ?? "en", ["home"])),
   },
-})
+});
 
-export default Home
+export default Home;

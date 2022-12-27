@@ -1,0 +1,78 @@
+{
+  "h1": "Documen­tation",
+  "p1": "Find out about Capture Note’s usage, shortcuts. If you still need help, don't hesitate to ask us.",
+  "how_to_use": {
+    "step1": {
+      "title": "step1 title",
+      "description": "step1 description"
+    }
+  },
+  "shortcuts": {
+    "title": "Keyboard Shortcuts",
+    "description": "Capture Note comes with a very useful global and non-global keyboard shortcuts.",
+    "global": {
+      "title": "Global Shortcuts",
+      "description": "Capture Note comes with a useful global keyboard shortcuts.",
+      "capture_screen": {
+        "title": "Capture Screen",
+        "description": "You can take a screenshot of the entire screen using this global shorcut"
+      },
+      "capture_portion": {
+        "title": "Capture Selected Portion",
+        "description": "You can take a screenshot of the selected portion using this global shorcut"
+      },
+      "open_image": {
+        "title": "Open Image",
+        "description": "You can open image using this global shorcut"
+      }
+    },
+    "page": {
+      "title": "Page Shortcuts",
+      "description": "Capture Note comes with a useful keyboard shortcuts for editing the page(Image and Notes)",
+      "save_page": {
+        "title": "Save Page",
+        "description": "You can save page(Image and Notes) as single image file"
+      },
+      "copy_to_clipboard": {
+        "title": "Copy to Clipboard",
+        "description": "You can copy page(Image and Notes) to the clipboard"
+      },
+      "create_note": {
+        "title": "Add Note",
+        "description": "You can add a new note using this shortcut"
+      },
+      "create_note_from_paste": {
+        "title": "Add Note from Clipboard",
+        "description": "You can add a new note from clipboard using this shortcut"
+      },
+      "close_page": {
+        "title": "Close the page",
+        "description": "You can clear the image and notes and close app"
+      }
+    },
+    "note": {
+      "title": "Note Shortcuts",
+      "description": "Capture Note comes with a useful keyboard shortcuts for editing the notes",
+      "delete_note": {
+        "title": "Delete Note",
+        "description": "You can delete focused note with this shortcut"
+      },
+      "move_note": {
+        "title": "Move Note",
+        "description": "When there is no text, you can move notes.\nIt is possible only when there are no input characters"
+      },
+      "change_note_width": {
+        "title": "Increase / Decresase note width",
+        "description": "You can increase or decresase the note width with this shortcut\nIt is possible only when there are no input characters"
+      },
+      "escape_note": {
+        "title": "Escacpe Note",
+        "description": "You can finish editing a note with this shortcut"
+      },
+      "focus_to_next_note": {
+        "title": "Escacpe Note",
+        "description": "You can focus next note with this shortcut"
+      }
+    }
+  }
+}

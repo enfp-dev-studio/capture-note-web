@@ -14,17 +14,14 @@ const Feature = (props: Props) => {
   }, [ref.current]);
 
   return (
-    <div className="container hidden xl:flex ">
-      <div className="marvel-device macbook">
-        <div className="top-bar"></div>
-        <div className="camera"></div>
-        <div className="screen ">
-          <div className="flex flex-1 h-full justify-center items-center bg-black">
+    <div className="container hidden xl:flex xl:justify-center">
+      <div className="device">
+        <div className="device-macbook device-spacegray self-center">
+          <div className="device-frame">
             <img src="/assets/main_poster.jpeg"></img>
-            {/* <video ref={ref} loop autoPlay poster="assets/main_poster.jpeg" src="assets/main_feature.mp4"></video> */}
           </div>
+          <div className="device-power"></div>
         </div>
-        <div className="bottom-bar"></div>
       </div>
     </div>
   );

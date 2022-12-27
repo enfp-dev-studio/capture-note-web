@@ -3,7 +3,9 @@ import React from "react";
 export const AppleIcon = ({ checked }: { checked: boolean }) => {
   return (
     <div
-      className={`${checked ? "bg-secondary" : ""} p-4 w-24 h-24 rounded m-2`}
+      className={`${
+        checked ? "bg-secondary" : ""
+      } p-4 w-20 h-20 rounded-md m-2 shadow-md`}
     >
       <svg
         width="100%"
@@ -20,7 +22,9 @@ export const AppleIcon = ({ checked }: { checked: boolean }) => {
 export const WindowsIcon = ({ checked }: { checked: boolean }) => {
   return (
     <div
-      className={`${checked ? "bg-secondary" : ""} p-4 w-24 h-24 rounded m-2`}
+      className={`${
+        checked ? "bg-secondary" : ""
+      } p-4 w-20 h-20 rounded-md m-2 shadow-md`}
     >
       <svg
         width="100%"

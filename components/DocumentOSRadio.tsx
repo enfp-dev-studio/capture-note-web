@@ -1,26 +1,32 @@
-import { useState } from "react"
-import { RadioGroup } from "@headlessui/react"
-import { AppleIcon, WindowsIcon } from "./Icons"
-import OSType from "../types/OSType"
+import { useState } from "react";
+import { RadioGroup } from "@headlessui/react";
+import { AppleIcon, WindowsIcon } from "./Icons";
+import OSType from "../types/OSType";
 
 export default function DocumentOSRadio({
   setOS,
   os,
 }: {
-  os: OSType
-  setOS: React.Dispatch<React.SetStateAction<OSType>>
+  os: OSType;
+  setOS: React.Dispatch<React.SetStateAction<OSType>>;
 }) {
   return (
     <div className="container">
-      <RadioGroup className="flex flex-row justify-center" value={os} onChange={setOS}>
+      <RadioGroup
+        className="flex flex-row justify-center"
+        value={os}
+        onChange={setOS}
+      >
         {/* <RadioGroup.Label>Plan</RadioGroup.Label> */}
-        <RadioGroup.Option value="mac">{({ checked }) => <AppleIcon checked={checked}></AppleIcon>}</RadioGroup.Option>
+        <RadioGroup.Option value="mac">
+          {({ checked }) => <AppleIcon checked={checked}></AppleIcon>}
+        </RadioGroup.Option>
         <RadioGroup.Option value="win">
           {({ checked }) => <WindowsIcon checked={checked}></WindowsIcon>}
         </RadioGroup.Option>
       </RadioGroup>
     </div>
-  )
+  );
 }
 
 // import React, { useState } from "react";

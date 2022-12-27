@@ -1,20 +1,20 @@
-import React from "react"
-import AppStoreBadge from "../components/AppStoreBadge"
-import Link from "next/link"
+import React from "react";
+import AppStoreBadge from "../components/AppStoreBadge";
+import Link from "next/link";
 
-type Props = {}
+type Props = {};
 
 type LinkLabel = {
-  title: string
-  link: string
-}
+  title: string;
+  link: string;
+};
 
 type LinkListProps = {
-  title: string
-  links: LinkLabel[]
-}
+  title: string;
+  links: LinkLabel[];
+};
 
-const mailAddress = "contact@enfpdev.com"
+const mailAddress = "contact@enfpdev.com";
 
 const LinkList = (props: LinkListProps) => {
   return (
@@ -26,25 +26,25 @@ const LinkList = (props: LinkListProps) => {
         </Link>
       ))}
     </div>
-  )
-}
+  );
+};
 
 const Footer = () => {
-  const mailTo = `mailto:${mailAddress}?${"To Capture Note"}=!&body=${""}`
+  const mailTo = `mailto:${mailAddress}?${"To Capture Note"}=!&body=${""}`;
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="container flex flex-col md:flex-row justify-between">
-        <div className="w-full  mt-16">
+    <div className="w-full text-center">
+      <div className="columns-2 md:columns-4 md:w-full">
+        <div className="w-full flex">
           <LinkList
             title="Product"
             links={[
               { title: "Pricing", link: "/pricing" },
-              { title: "Document", link: "/document" },
+              { title: "Docs", link: "/docs" },
             ]}
           />
         </div>
-        <div className="w-full mt-16">
+        <div className="w-full flex">
           <LinkList
             title="Connect"
             links={[
@@ -53,11 +53,11 @@ const Footer = () => {
             ]}
           />
         </div>
-        <div className="w-full mt-16">
+        <div className="w-full flex">
           <LinkList
             title="About"
             links={[
-              { title: "About", link: "/about" },
+              { title: "ENFP Dev Studio", link: "/about" },
               {
                 title: "Privacy Policy",
                 link: "https://www.notion.so/enfp-dev-studio/Privacy-Policy-62d32564637940119832e8b09971e4e5",
@@ -66,7 +66,7 @@ const Footer = () => {
             ]}
           />
         </div>
-        <div className="w-full mt-16">
+        <div className="w-full flex">
           <AppStoreBadge
             width={90}
             height={30}
@@ -74,9 +74,12 @@ const Footer = () => {
           ></AppStoreBadge>
         </div>
       </div>
-      <p className="my-12 text-sm md:mt-24">&copy; Copyright {new Date().getFullYear()}. All rights reserved.</p>
-    </div>
-  )
-}
 
-export default Footer
+      <p className="my-6 text-sm md:mt-24">
+        &copy; Copyright {new Date().getFullYear()}. All rights reserved.
+      </p>
+    </div>
+  );
+};
+
+export default Footer;
