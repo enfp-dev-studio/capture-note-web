@@ -12,7 +12,7 @@ const Contribute = (props: Props) => {
     <div className="container flex flex-1 justify-center items-center h-96 mt-24">
       <div className="space-y-8">
         {/* <button>{t('change-locale', { changeTo })}</button> */}
-        <h1 className="mx-auto max-w-xl text-3xl font-black text-center leading-[1.2em]">
+        <h1 className="mx-auto max-w-xl md:text-2xl md:font-black text-center leading-[1.2em]">
           {t("h1")}
         </h1>
         <p className="mx-auto max-w-xl text-xl text-justify leading-16 mt-8 !important">

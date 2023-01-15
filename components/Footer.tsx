@@ -57,7 +57,7 @@ const Footer = () => {
           <LinkList
             title="About"
             links={[
-              { title: "ENFP Dev Studio", link: "/about" },
+              { title: "Capture Note", link: "/about" },
               {
                 title: "Privacy Policy",
                 link: "https://www.notion.so/enfp-dev-studio/Privacy-Policy-62d32564637940119832e8b09971e4e5",

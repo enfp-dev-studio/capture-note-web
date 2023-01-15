@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 // import "../styles/device.min.css";
 import "../styles/macbook.css";
+import "../styles/frame.min.css";
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import React from "react";

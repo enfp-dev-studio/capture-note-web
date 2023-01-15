@@ -7,7 +7,7 @@ type Props = {
 
 const Button = (props: Props) => {
   return (
-    <div className="flex space-x-2 justify-center">
+    <div className="flex space-x-2">
       <button
         onClick={props.onClick}
         type="button"

@@ -13,7 +13,7 @@ const Pricing = (props: Props) => {
   return (
     <div className="container flex justify-center h-screen">
       <div className="flex grow flex-col max-w-xl mt-24">
-        <p className="self-center font-bold text-3xl">{t("h1")}</p>
+        <p className="self-center font-bold md:text-2xl">{t("h1")}</p>
         <p className="mx-auto text-xl text-secondary opacity-70 text-center mt-12 !important">
           {t("p1")}
         </p>

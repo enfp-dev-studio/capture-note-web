@@ -15,28 +15,14 @@ const Home = (props: Props) => {
     <>
       <div className="self-center mt-28">
         <div className="container mt-20 my-8">
-          <h1 className="mx-auto max-w-4xl text-5xl font-black self-center text-center leading-[1.2em]">
+          <h1 className="mx-auto max-w-4xl md:text-5xlmd:font-black self-center text-center leading-[1.2em]">
             {t("h1")}
           </h1>
-          <p className="mx-auto max-w-3xl text-2xl text-center leading-16 mt-8 !important">
+          <h2 className="mx-auto max-w-3xl text-xl text-center mt-8">
             {t("h1-p")}
-          </p>
+          </h2>
         </div>
       </div>
-      {/* <div className="container mt-28">
-        <div className="flex flex-row justify-center gap-12 h-24">
-          <div className="self-center">
-            <Button
-              onClick={() => {
-                // scrollTo("download")
-              }}
-            >
-              {t("btn-scroll-to-feature")}
-            </Button>
-          </div>
-          <p className="self-center">Get Capture Note free</p>
-        </div>
-      </div> */}
       <div className="container max-w-5xl mt-28 mx-auto">
         <Feature></Feature>
         <ImageDescrptionContainer

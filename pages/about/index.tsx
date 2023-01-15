@@ -51,19 +51,6 @@ const About = (props: Props) => {
             make someone more enjoyable or convenient. And I hope that what we
             have developed will help more people
           </p>
-
-          {/* <p>
-        "Capture Note" providng fastest and easiest way to make notes over the screenshot.
-        <br></br>
-        You can take screenshots and writes notes over them and easily save it as image file or copy
-        it to clipboard.
-        <br></br>
-        In these days we get most of the information from visualized contents like image or video.
-        But when you find the information want to remember, unfortunately, there is no easy way to
-        save them. You have to write or type all the information somewhere. Some people take the
-        screenshots and add it to the note app. It may be easy but this way people can't remember
-        what is the information to remember because image include so many information.
-      </p> */}
         </div>
       </div>
     </div>

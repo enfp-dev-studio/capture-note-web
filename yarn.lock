@@ -648,6 +648,11 @@ cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+css-device-frames@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/css-device-frames/-/css-device-frames-1.0.5.tgz#225f6b9ad6aa48ea5672f33359a0cfbfeb0c5950"
+  integrity sha512-hYvh7DTdZH+RfNs7KV+3ltvTYZBdkzgpK6DUqJlbN7ZCmrXElkodTOxyAzY656e0j+qdF5OOlSv4uorL27VgAA==
+
 cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"

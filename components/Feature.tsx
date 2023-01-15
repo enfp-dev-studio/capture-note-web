@@ -14,15 +14,26 @@ const Feature = (props: Props) => {
   }, [ref.current]);
 
   return (
-    <div className="container hidden xl:flex xl:justify-center">
+    <div className="hidden md:flex md:justify-center w-full">
       <div className="device">
         <div className="device-macbook device-spacegray self-center">
           <div className="device-frame">
-            <img src="/assets/main_poster.jpeg"></img>
+            <video
+              src="/assets/main_video.mp4"
+              style={{
+                marginTop: -10,
+                height: 360,
+                objectFit: "cover",
+              }}
+              autoPlay
+              loop
+            ></video>
+            {/* <img src="/assets/main_poster.jpeg"></img> */}
           </div>
           <div className="device-power"></div>
         </div>
       </div>
+      <div></div>
     </div>
   );
 };
