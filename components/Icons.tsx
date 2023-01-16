@@ -50,6 +50,16 @@ export const SaveIcon = () => {
         height="100%"
         viewBox="0 0 512 512"
       >
+        <path d="M465.94 119.76l-73.7-73.7A47.68 47.68 0 00358.3 32H96a64 64 0 00-64 64v320a64 64 0 0064 64h320a64 64 0 0064-64V153.7a47.68 47.68 0 00-14.06-33.94zM120 112h176a8 8 0 018 8v48a8 8 0 01-8 8H120a8 8 0 01-8-8v-48a8 8 0 018-8zm139.75 319.91a80 80 0 1176.16-76.16 80.06 80.06 0 01-76.16 76.16z" />
+        <circle cx="256" cy="352" r="48" />
+      </svg>
+
+      {/* <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        viewBox="0 0 512 512"
+      >
         <path
           d="M380.93 57.37A32 32 0 00358.3 48H94.22A46.21 46.21 0 0048 94.22v323.56A46.21 46.21 0 0094.22 464h323.56A46.36 46.36 0 00464 417.78V153.7a32 32 0 00-9.37-22.63zM256 416a64 64 0 1164-64 63.92 63.92 0 01-64 64zm48-224H112a16 16 0 01-16-16v-64a16 16 0 0116-16h192a16 16 0 0116 16v64a16 16 0 01-16 16z"
           fill="none"
@@ -58,7 +68,7 @@ export const SaveIcon = () => {
           strokeLinejoin="round"
           strokeWidth="32"
         />
-      </svg>
+      </svg> */}
     </div>
   );
 };
@@ -67,6 +77,15 @@ export const CopyIcon = () => {
   return (
     <div className="fill-primary dark:fill-dark-primary w-12 h-12">
       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        viewBox="0 0 512 512"
+      >
+        <path d="M408 480H184a72 72 0 01-72-72V184a72 72 0 0172-72h224a72 72 0 0172 72v224a72 72 0 01-72 72z" />
+        <path d="M160 80h235.88A72.12 72.12 0 00328 32H104a72 72 0 00-72 72v224a72.12 72.12 0 0048 67.88V160a80 80 0 0180-80z" />
+      </svg>
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
         height="100%"
@@ -92,7 +111,7 @@ export const CopyIcon = () => {
           strokeLinejoin="round"
           strokeWidth="32"
         />
-      </svg>
+      </svg> */}
     </div>
   );
 };

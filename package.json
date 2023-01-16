@@ -22,6 +22,7 @@
     "jotai": "^1.12.0",
     "next": "^13.0.6",
     "next-i18next": "^13.0.1",
+    "next-seo": "^5.15.0",
     "postcss-focus-visible": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
