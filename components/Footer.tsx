@@ -1,5 +1,5 @@
 import React from "react";
-import AppStoreBadge from "../components/AppStoreBadge";
+// import AppStoreBadge from "../components/AppStoreBadge";
 import Link from "next/link";
 
 type Props = {};
@@ -34,7 +34,7 @@ const Footer = () => {
 
   return (
     <div className="w-full text-center">
-      <div className="columns-2 md:columns-4 md:w-full">
+      <div className="columns-2 md:columns-3 md:w-full">
         <div className="w-full flex">
           <LinkList
             title="Product"
@@ -66,13 +66,14 @@ const Footer = () => {
             ]}
           />
         </div>
-        <div className="w-full flex">
+        {/* <div className="w-full flex">
+          <div>You can also download from the App Store.</div>
           <AppStoreBadge
             width={90}
             height={30}
             appStoreLink={"https://apps.apple.com/app/id1620829533"}
           ></AppStoreBadge>
-        </div>
+        </div> */}
       </div>
 
       <p className="my-6 text-sm md:mt-24">

@@ -55,7 +55,7 @@
       "description": "Capture Note comes with a useful keyboard shortcuts for editing the notes",
       "delete_note": {
         "title": "Delete Note",
-        "description": "You can delete focused note with this shortcut"
+        "description": "You can delete focused note using this shortcut"
       },
       "move_note": {
         "title": "Move Note",
@@ -63,15 +63,15 @@
       },
       "change_note_width": {
         "title": "Increase / Decresase note width",
-        "description": "You can increase or decresase the note width with this shortcut\nIt is possible only when there are no input characters"
+        "description": "You can increase or decresase the note width using this shortcut\nIt is possible only when there are no input characters"
       },
       "escape_note": {
         "title": "Escacpe Note",
-        "description": "You can finish editing a note with this shortcut"
+        "description": "You can finish editing a note using this shortcut"
       },
       "focus_to_next_note": {
-        "title": "Escacpe Note",
-        "description": "You can focus next note with this shortcut"
+        "title": "Move Focus",
+        "description": "You can move focus to the next note using this shortcut"
       }
     }
   }

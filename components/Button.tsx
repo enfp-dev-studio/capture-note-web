@@ -9,6 +9,7 @@ const Button = (props: Props) => {
   return (
     <div className="flex space-x-2">
       <button
+        // disabled={props.disabled}
         onClick={props.onClick}
         type="button"
         className="inline-block px-6 py-2.5 bg-secondary text-accent auto-center leading-12 leading-tight rounded shadow-md hover:shadow-lg  focus:shadow-lg focus:outline-none active:shadow-lg transition hover:opacity-90 duration-150 ease-in-out"

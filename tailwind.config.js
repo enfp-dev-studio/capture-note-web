@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors")
+const colors = require("tailwindcss/colors");
 
 const theme = {
   colors: {
@@ -77,8 +77,9 @@ const theme = {
   contianer: {
     center: true,
     padding: {},
+    margin: {},
   },
-}
+};
 
 module.exports = {
   content: [
@@ -88,4 +89,4 @@ module.exports = {
   ],
   theme,
   plugins: [],
-}
+};

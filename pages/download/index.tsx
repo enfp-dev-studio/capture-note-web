@@ -22,11 +22,11 @@ const Download = (props: Props) => {
           {t("p1")}
         </p>
         <div className="flex justify-center">
-          <AppStoreBadge
+          {/* <AppStoreBadge
             width={150}
             height={50}
             appStoreLink={"https://apps.apple.com/app/id1620829533"}
-          ></AppStoreBadge>
+          ></AppStoreBadge> */}
         </div>
       </div>
     </div>
