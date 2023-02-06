@@ -132,8 +132,8 @@ const Home = (props: Props) => {
       <div className="container mt-24 mx-auto">
         <Feature></Feature>
       </div>
-      <div className="mt-20 mx-auto bg-neutral-900">
-        <div className="md:grid md:grid-cols-3 pt-20">
+      <div className="mt-20 w-screen bg-neutral-900">
+        <div className="container mx-auto md:grid md:grid-cols-3 pt-20">
           <div className="grid grid-rows-2">
             <div className="bg-neutral-800 rounded-md m-4 grid grid-cols-3 place-items-center h-64 opacity-90">
               <BookIcon></BookIcon>
@@ -143,29 +143,29 @@ const Home = (props: Props) => {
               <VideocamIcon></VideocamIcon>
               <InternetIcon></InternetIcon>
             </div>
-            <div className="my-auto m-4">
+            <div className="m-4">
               <div className="text-2xl font-bold">{t("step-1-title")}</div>
               <div className="text-lg leading-7 mt-8">
                 {t("step-1-description")}
               </div>
             </div>
           </div>
-          <div className="grid grid-rows-2 space-x-4">
+          <div className="grid grid-rows-2">
             <div className="bg-neutral-800 m-4 rounded-md h-64">
               <img
                 className="rounded-md obhject-cover h-full w-full shadow-md"
                 src={"/assets/main_edit.jpeg"}
               ></img>
             </div>
-            <div className="my-auto m-4">
+            <div className="m-4">
               <div className="text-2xl font-bold">{t("step-2-title")}</div>
               <div className="text-lg leading-7 mt-8">
                 {t("step-2-description")}
               </div>
             </div>
           </div>
-          <div className="grid grid-rows-2 space-x-4">
-            <div className="bg-neutral-800 rounded-md  m-4 h-64 flex flex-row items-center justify-center space-x-8">
+          <div className="grid grid-rows-2">
+            <div className="bg-neutral-800 rounded-md m-4 h-64 flex flex-row items-center justify-center space-x-4">
               <div className="flex justify-center">
                 <img className="object-contain" src="/app_bar_logo.png"></img>
               </div>
@@ -183,7 +183,7 @@ const Home = (props: Props) => {
                 </div>
               </div>
             </div>
-            <div className="my-auto  m-4">
+            <div className="m-4">
               <div className="text-2xl font-bold">{t("step-3-title")}</div>
               <div className="text-lg leading-7 mt-8">
                 {t("step-3-description")}
