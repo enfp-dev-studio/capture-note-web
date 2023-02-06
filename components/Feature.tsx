@@ -19,6 +19,7 @@ const Feature = (props: Props) => {
         <div className="device-macbook device-spacegray self-center">
           <div className="device-frame">
             <video
+              poster="/assets/main_poster.jpeg"
               src="/assets/main_video.mp4"
               style={{
                 marginTop: -10,
