@@ -1,4 +1,4 @@
-.app-frame {
+/* .app-frame {
   --background: #fff;
   --bar-background: #f4f4f4 linear-gradient(to bottom, #fafafa, #f4f4f4);
   --bar-height: 44px;
@@ -315,8 +315,4 @@
 .app-frame.scrolling > :only-child {
   overflow: auto;
   padding: var(--padding-v) var(--padding-h);
-} /*! CSS Device Frames v1.0.5
- *  https://github.com/jhildenbiddle/css-device-frames#readme
- *  (c) 2021-2022 John Hildenbiddle
- *  MIT license
- */ /*# sourceMappingURL=device-frames.min.css.map */
+} */

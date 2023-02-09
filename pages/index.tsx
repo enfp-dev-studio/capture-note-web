@@ -152,11 +152,11 @@ const Home = (props: Props) => {
             </div>
           </div>
           <div className="grid grid-rows-2">
-            <div className="bg-neutral-800 m-4 rounded-md h-64 relative">
+            <div className="m-4 rounded-md h-64 relative overflow-hidden">
               <Image
                 alt=""
                 fill={true}
-                className="rounded-md obhject-cover h-full w-full shadow-md"
+                className="rounded-md object-contain h-full w-full shadow-md"
                 src={"/assets/main_example_2.webp"}
               ></Image>
             </div>
