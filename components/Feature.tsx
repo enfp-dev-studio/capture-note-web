@@ -19,7 +19,7 @@ const Feature = (props: Props) => {
         <div className="device-macbook device-spacegray self-center">
           <div className="device-frame">
             <video
-              poster="/assets/main_poster.jpeg"
+              poster="/assets/main_example_1.webp"
               src="/assets/main_video.mp4"
               style={{
                 marginTop: -10,
@@ -29,7 +29,6 @@ const Feature = (props: Props) => {
               autoPlay
               loop
             ></video>
-            {/* <img src="/assets/main_poster.jpeg"></img> */}
           </div>
           <div className="device-power"></div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "next-i18next";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Image from "next/image";
 
 type Props = {};
 
@@ -22,7 +23,7 @@ const Contribute = (props: Props) => {
           <a href="https://buymeacoffee.com/enfpdev" target="_blank">
             <img
               className="rounded shadow-md"
-              src="https://cdn.buymeacoffee.com/buttons/default-orange.png"
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
               alt="Buy Me A Coffee"
               height="66"
               width="261"

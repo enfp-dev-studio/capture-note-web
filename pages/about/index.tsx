@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {};
 
@@ -14,21 +15,26 @@ const About = (props: Props) => {
         <div className="space-y-8">
           {/* <button>{t('change-locale', { changeTo })}</button> */}
           <div className="flex grow space-x-4">
-            <img
-              src="/app_bar_logo.png"
+            <Image
+              width={48}
+              height={48}
+              src="/app_bar_logo.webp"
               className="object-contain"
               alt={""}
-            ></img>
+            ></Image>
             <div className="self-center ml-2 font-bold text-2xl">
               Capture Note
             </div>
           </div>
           <p className="text-justify">{t("description")}</p>
           <div className="flex flex-row grow space-x-4 items-center">
-            <img
+            <Image
+              width={48}
+              height={48}
+              alt=""
               className="w-16 h-16 rounded-full"
-              src="/assets/about_icon.png"
-            ></img>
+              src="/assets/about_icon.webp"
+            ></Image>
             <div className="flex flex-col justify-between">
               <p className="text-2xl font-bold">Jake</p>
               <Link

@@ -21,7 +21,7 @@ const DEFAULT_SEO = {
     site_name: "Capture Note",
     images: [
       {
-        url: "https://capture-note.enfpdev.com/og-image.jpeg",
+        url: "https://capture-note.enfpdev.com/og-image.webp",
         width: 533,
         height: 320,
         alt: "image",

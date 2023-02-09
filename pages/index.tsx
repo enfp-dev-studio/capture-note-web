@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import Button from "../components/Button";
 import Feature from "../components/Feature";
+import Image from "next/image";
 // import ImageDescrptionContainer from "../components/ImageAndDescriptionBox";
 import {
   ArrowRightIcon,
@@ -151,11 +152,13 @@ const Home = (props: Props) => {
             </div>
           </div>
           <div className="grid grid-rows-2">
-            <div className="bg-neutral-800 m-4 rounded-md h-64">
-              <img
+            <div className="bg-neutral-800 m-4 rounded-md h-64 relative">
+              <Image
+                alt=""
+                fill={true}
                 className="rounded-md obhject-cover h-full w-full shadow-md"
-                src={"/assets/main_edit.jpeg"}
-              ></img>
+                src={"/assets/main_example_2.webp"}
+              ></Image>
             </div>
             <div className="m-4">
               <div className="text-2xl font-bold">{t("step-2-title")}</div>
@@ -167,7 +170,13 @@ const Home = (props: Props) => {
           <div className="grid grid-rows-2">
             <div className="bg-neutral-800 rounded-md m-4 h-64 flex flex-row items-center justify-center space-x-4">
               <div className="flex justify-center">
-                <img className="object-contain" src="/app_bar_logo.png"></img>
+                <Image
+                  width={48}
+                  height={48}
+                  alt="app_bar_logo"
+                  className="object-contain"
+                  src="/app_bar_logo.webp"
+                ></Image>
               </div>
               <div className="flex flex-col justify-center items-center">
                 <ArrowRightIcon></ArrowRightIcon>
