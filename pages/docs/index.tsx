@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -15,8 +15,9 @@ const shortcuts: ShortcutItem[] = docKeys;
 
 const Shortcuts = ({ os }: { os: string }) => {
   const { t } = useTranslation("docs");
+
   return (
-    <div className="w-full flex flex-col">
+    <div className="container flex flex-col">
       {shortcuts.map((documentItem, index) => {
         return (
           <div
@@ -35,9 +36,9 @@ const Shortcuts = ({ os }: { os: string }) => {
                 return (
                   <div
                     key={key + index.toString()}
-                    className="flex flex-row space-x-4 h-20 items-center"
+                    className="w-full flex flex-row space-x-4 h-20 items-center"
                   >
-                    <div className="h-12 w-1/3 flex justify-center items-center border rounded p-2 border-primary dark:border-dark-primary">
+                    <div className="h-12 w-72 flex justify-center items-center border rounded p-2 border-primary dark:border-dark-primary">
                       <p className="font-medium">
                         {getShortcut(key as ShortcutKeyType, os as OSType)}
                       </p>
@@ -66,6 +67,26 @@ type Props = {};
 const Document = (props: Props) => {
   const { t } = useTranslation("docs");
   let [os, setOS] = useState<OSType>("mac");
+  useEffect(() => {
+    const getPlatform = (): OSType => {
+      const userAgent =
+        typeof window !== "undefined" ? window.navigator.userAgent : "";
+
+      if (userAgent.includes("Windows")) {
+        return "win";
+      } else if (userAgent.includes("Mac OS X")) {
+        return "mac";
+      } else {
+        return "other";
+      }
+    };
+    const platfrom = getPlatform();
+    if (platfrom === "win") {
+      setOS(platfrom);
+    } else {
+      setOS("mac");
+    }
+  }, []);
 
   return (
     <div className="container flex flex-col flex-1">

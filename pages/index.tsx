@@ -19,15 +19,15 @@ import {
   VideocamIcon,
   YoutubeIcon,
 } from "../components/Icons";
-import { OS } from "../types/Type";
 import { Params } from "../constants/params";
+import OSType from "../types/OSType";
 
 type Props = {};
 
 const Home = (props: Props) => {
   const router = useRouter();
   const { t } = useTranslation("home");
-  const [platform, setPlatform] = React.useState<OS>("other");
+  const [platform, setPlatform] = React.useState<OSType>("other");
   const [downloadTitle, setDownloadTitle] = React.useState("");
   useEffect(() => {
     isSupportedOS()
@@ -35,7 +35,7 @@ const Home = (props: Props) => {
       : setDownloadTitle("Unsupported OS");
     setPlatform(getPlatform());
   }, []);
-  const getPlatform = (): OS => {
+  const getPlatform = (): OSType => {
     const userAgent =
       typeof window !== "undefined" ? window.navigator.userAgent : "";
 
@@ -43,8 +43,6 @@ const Home = (props: Props) => {
       return "win";
     } else if (userAgent.includes("Mac OS X")) {
       return "mac";
-    } else if (userAgent.includes("Linux")) {
-      return "linux";
     } else {
       return "other";
     }

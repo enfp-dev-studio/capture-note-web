@@ -59,7 +59,7 @@ export const getShortcut = (
   os: OSType
 ): string => {
   const shortcut = shortcuts.get(shortcutType);
-  return shortcut ? shortcut?.shortcut[os] : "";
+  return shortcut && os !== "other" ? shortcut?.shortcut[os] : "";
 };
 
 const shortcuts = new Map<ShortcutKeyType, ShortcutType>([
