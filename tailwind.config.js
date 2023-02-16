@@ -8,7 +8,7 @@ const theme = {
     "dark-primary": "#F1F1F1",
     secondary: "#FFBF00",
     background: "rgba(249,249,244)", //"#F1F1F1",
-    "dark-background": "#2F2F2F",
+    "dark-background": "#18181b",
     accent: "#2F2F2F",
     "gray-dark": "#273444",
     gray: "#8492a6",
