@@ -131,7 +131,7 @@ const Home = (props: Props) => {
       <div className="container mt-24 mx-auto">
         <Feature></Feature>
       </div>
-      <div className="mt-20 w-screen bg-neutral-900">
+      <div className="mt-20 w-screen">
         <div className="container mx-auto md:grid md:grid-cols-3 pt-20">
           <div className="grid grid-rows-2">
             <div className="bg-neutral-800 rounded-md m-4 grid grid-cols-3 place-items-center h-64 opacity-90">

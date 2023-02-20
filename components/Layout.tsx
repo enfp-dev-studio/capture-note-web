@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex flex-col items-center min-h-screen w-full dark:bg-dark-background bg-background dark:text-dark-primary text-primary">
+    <div className="flex flex-col items-center min-h-screen w-full bg-dark-background dark:text-dark-primary text-primary">
       <div className="container flex-none">
         <AppBar />
       </div>
