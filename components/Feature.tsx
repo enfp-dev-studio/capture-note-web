@@ -20,7 +20,8 @@ const Feature = (props: Props) => {
           <div className="device-frame">
             <video
               poster="/assets/main_example_1.webp"
-              src="/assets/main_video.mp4"
+              // src="/assets/main_video.mp4"
+              src="https://i.imgur.com/CWZKSKZ.mp4"
               style={{
                 marginTop: -10,
                 height: 360,
