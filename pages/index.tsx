@@ -40,12 +40,23 @@ const Home = (props: Props) => {
       typeof window !== "undefined" ? window.navigator.userAgent : "";
 
     if (userAgent.includes("Windows")) {
-      return "win";
+      if (
+        userAgent.indexOf("Win64") !== -1 ||
+        userAgent.indexOf("x64") !== -1
+      ) {
+        console.log("Windows 64-bit");
+        return "win";
+      }
     } else if (userAgent.includes("Mac OS X")) {
-      return "mac";
-    } else {
-      return "other";
+      if (userAgent.indexOf("Intel") !== -1) {
+        return "mac-x64";
+      } else {
+        // else if (userAgent.indexOf('Arm') !== -1) {
+        return "mac-arm";
+        // }
+      }
     }
+    return "other";
   };
 
   const getLatestRelease = async (): Promise<any> => {
@@ -75,9 +86,14 @@ const Home = (props: Props) => {
           asset.name.toString().includes("setup.exe")
         )?.browser_download_url;
         break;
-      case "mac":
+      case "mac-arm":
         link = latestRelease?.assets?.find((asset: any) =>
-          asset.name.toString().includes("dmg")
+          asset.name.toString().includes("arm64.dmg")
+        )?.browser_download_url;
+        break;
+      case "mac-x64":
+        link = latestRelease?.assets?.find((asset: any) =>
+          asset.name.toString().includes("x64.dmg")
         )?.browser_download_url;
         break;
       default:
