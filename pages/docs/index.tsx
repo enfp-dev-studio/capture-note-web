@@ -38,7 +38,7 @@ const Shortcuts = ({ isMac }: { isMac: boolean }) => {
                     key={key + index.toString()}
                     className="w-full flex flex-row space-x-4 h-20 items-center"
                   >
-                    <div className="h-12 w-72 flex justify-center items-center border rounded p-2 border-primary dark:border-dark-primary">
+                    <div className="h-12 w-72 flex justify-center items-center border rounded p-2 border-dark-primary">
                       <p className="font-medium">
                         {getShortcut(key as ShortcutKeyType, isMac)}
                       </p>
