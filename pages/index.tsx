@@ -24,6 +24,30 @@ import OSType from "../types/OSType";
 
 type Props = {};
 
+export const getPlatform = (): OSType => {
+  const userAgent =
+    typeof window !== "undefined" ? window.navigator.userAgent : "";
+
+  if (userAgent.includes("Windows")) {
+    if (
+      userAgent.indexOf("Win64") !== -1 ||
+      userAgent.indexOf("x64") !== -1
+    ) {
+      console.log("Windows 64-bit");
+      return "win";
+    }
+  } else if (userAgent.includes("Mac OS X")) {
+    if (userAgent.indexOf("Intel") !== -1) {
+      return "mac-x64";
+    } else {
+      // else if (userAgent.indexOf('Arm') !== -1) {
+      return "mac-arm";
+      // }
+    }
+  }
+  return "other";
+};
+
 const Home = (props: Props) => {
   const router = useRouter();
   const { t } = useTranslation("home");
@@ -35,29 +59,7 @@ const Home = (props: Props) => {
       : setDownloadTitle("Unsupported OS");
     setPlatform(getPlatform());
   }, []);
-  const getPlatform = (): OSType => {
-    const userAgent =
-      typeof window !== "undefined" ? window.navigator.userAgent : "";
 
-    if (userAgent.includes("Windows")) {
-      if (
-        userAgent.indexOf("Win64") !== -1 ||
-        userAgent.indexOf("x64") !== -1
-      ) {
-        console.log("Windows 64-bit");
-        return "win";
-      }
-    } else if (userAgent.includes("Mac OS X")) {
-      if (userAgent.indexOf("Intel") !== -1) {
-        return "mac-x64";
-      } else {
-        // else if (userAgent.indexOf('Arm') !== -1) {
-        return "mac-arm";
-        // }
-      }
-    }
-    return "other";
-  };
 
   const getLatestRelease = async (): Promise<any> => {
     try {

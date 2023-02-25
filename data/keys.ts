@@ -27,7 +27,7 @@ export const docKeys = [
   },
 ];
 
-const isMacOS = () => process.platform === "darwin";
+export const isMacOS = () => process.platform === "darwin";
 
 export type ShortcutScopeType = "global" | "page" | "note";
 export type ShortcutKeyType =
@@ -56,10 +56,14 @@ export type ShortcutType = {
 
 export const getShortcut = (
   shortcutType: ShortcutKeyType,
-  os: OSType
+  isMac: boolean
 ): string => {
-  const shortcut = shortcuts.get(shortcutType);
-  return shortcut && os !== "other" ? shortcut?.shortcut[os] : "";
+  const shortcut = shortcuts.get(shortcutType)?.shortcut;
+  if (shortcut) {
+    return isMac ? shortcut.mac : shortcut.win;
+  } else {
+    return "";
+  }
 };
 
 const shortcuts = new Map<ShortcutKeyType, ShortcutType>([

@@ -4,18 +4,20 @@ import { AppleIcon, WindowsIcon } from "./Icons";
 import OSType from "../types/OSType";
 
 export default function DocumentOSRadio({
-  setOS,
-  os,
+  setIsMac,
+  isMac,
 }: {
-  os: OSType;
-  setOS: React.Dispatch<React.SetStateAction<OSType>>;
+  setIsMac: (isMac: boolean) => void;
+  isMac: boolean;
 }) {
   return (
     <div className="container">
       <RadioGroup
         className="flex flex-row justify-center"
-        value={os}
-        onChange={setOS}
+        value={isMac ? "mac" : "win"}
+        onChange={(value) => {
+          setIsMac(value === "mac");
+        }}
       >
         {/* <RadioGroup.Label>Plan</RadioGroup.Label> */}
         <RadioGroup.Option value="mac">

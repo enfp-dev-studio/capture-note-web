@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import DocumentOSRadio from "../../components/DocumentOSRadio";
-import { docKeys, getShortcut, ShortcutKeyType } from "../../data/keys";
+import { docKeys, getShortcut, isMacOS, ShortcutKeyType } from "../../data/keys";
 import OSType from "../../types/OSType";
 
 type ShortcutItem = {
@@ -13,7 +13,7 @@ type ShortcutItem = {
 
 const shortcuts: ShortcutItem[] = docKeys;
 
-const Shortcuts = ({ os }: { os: string }) => {
+const Shortcuts = ({ isMac }: { isMac: boolean }) => {
   const { t } = useTranslation("docs");
 
   return (
@@ -40,7 +40,7 @@ const Shortcuts = ({ os }: { os: string }) => {
                   >
                     <div className="h-12 w-72 flex justify-center items-center border rounded p-2 border-primary dark:border-dark-primary">
                       <p className="font-medium">
-                        {getShortcut(key as ShortcutKeyType, os as OSType)}
+                        {getShortcut(key as ShortcutKeyType, isMac)}
                       </p>
                     </div>
                     <div className="flex flex-col text-base font-semibold w-2/3">
@@ -66,27 +66,7 @@ type Props = {};
 
 const Document = (props: Props) => {
   const { t } = useTranslation("docs");
-  let [os, setOS] = useState<OSType>("mac");
-  useEffect(() => {
-    const getPlatform = (): OSType => {
-      const userAgent =
-        typeof window !== "undefined" ? window.navigator.userAgent : "";
-
-      if (userAgent.includes("Windows")) {
-        return "win";
-      } else if (userAgent.includes("Mac OS X")) {
-        return "mac";
-      } else {
-        return "other";
-      }
-    };
-    const platfrom = getPlatform();
-    if (platfrom === "win") {
-      setOS(platfrom);
-    } else {
-      setOS("mac");
-    }
-  }, []);
+  const [isMac, setIsMac] = useState(isMacOS());
 
   return (
     <div className="container flex flex-col flex-1">
@@ -102,10 +82,10 @@ const Document = (props: Props) => {
         </>
       </div>
       <div className="mt-12">
-        <DocumentOSRadio setOS={setOS} os={os}></DocumentOSRadio>
+        <DocumentOSRadio setIsMac={setIsMac} isMac={isMac}></DocumentOSRadio>
       </div>
       <div id="shortcuts" className="flex flex-col">
-        <Shortcuts os={os}></Shortcuts>
+        <Shortcuts isMac={isMac}></Shortcuts>
       </div>
     </div>
   );
