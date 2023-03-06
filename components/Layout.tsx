@@ -1,10 +1,18 @@
 import React from "react";
 import AppBar from "./AppBar";
 import Footer from "./Footer";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex flex-col items-center min-h-screen w-full bg-dark-background text-dark-primary">
+    <div
+      className="flex flex-col items-center min-h-screen w-full bg-dark-background text-dark-primary"
+      style={{
+        fontFamily: inter.style.fontFamily,
+      }}
+    >
       <div className="container flex-none">
         <AppBar />
       </div>

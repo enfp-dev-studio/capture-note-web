@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-dark-background text-dark-primary font-inter min-w-full;
+  @apply bg-dark-background text-dark-primary min-w-full;
 }
 
 @layer components {

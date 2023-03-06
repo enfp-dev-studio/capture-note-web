@@ -14,9 +14,6 @@ const theme = {
     gray: "#8492a6",
     "gray-light": "#d3dce6",
   },
-  fontFamily: {
-    inter: ["Inter, sans-serif"],
-  },
   fontSize: {
     xs: ["0.75rem", { lineHeight: "1rem" }],
     sm: ["0.875rem", { lineHeight: "1.5rem" }],
