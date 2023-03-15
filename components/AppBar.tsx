@@ -11,6 +11,12 @@ const AppBar = (props: Props) => {
         <Logo></Logo>
         <div className="flex flex-1 flex-row justify-end space-x-8">
           <Link
+            href="/usage"
+            className="hidden md:block self-center hover:cursor-pointer"
+          >
+            Usage
+          </Link>
+          <Link
             href="/about"
             className="hidden md:block self-center hover:cursor-pointer"
           >
