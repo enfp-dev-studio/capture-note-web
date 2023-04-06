@@ -17,6 +17,13 @@ const AppBar = (props: Props) => {
             Usage
           </Link>
           <Link
+            target="_blank"
+            href="https://capture-note-web-demo.netlify.app"
+            className="hidden md:block self-center hover:cursor-pointer"
+          >
+            Playground
+          </Link>
+          <Link
             href="/about"
             className="hidden md:block self-center hover:cursor-pointer"
           >
