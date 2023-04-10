@@ -7,6 +7,7 @@ import "../styles/globals.css";
 import "../styles/macbook.css";
 import "../styles/frame.min.css";
 import Layout from "../components/Layout";
+import Script from "next/script";
 
 const DEFAULT_SEO = {
   title: "Capture Note: Quick and easy notes on the screenshot",
@@ -45,6 +46,19 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo {...DEFAULT_SEO} />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-MKXLB8FSDV"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-MKXLB8FSDV');
+        `}
+      </Script>
       <Layout>
         <Component {...pageProps} />
       </Layout>
