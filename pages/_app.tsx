@@ -47,7 +47,7 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <DefaultSeo {...DEFAULT_SEO} />
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-MKXLB8FSDV"
+        src="https://www.googletagmanager.com/gtag/js?id=G-J1G2H0DF21" //G-MKXLB8FSDV
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -56,7 +56,7 @@ function App({ Component, pageProps }: AppProps) {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-MKXLB8FSDV');
+          gtag('config', 'G-J1G2H0DF21');
         `}
       </Script>
       <Layout>
