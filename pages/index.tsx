@@ -58,7 +58,7 @@ const Home = (props: Props) => {
       switch (platform) {
         case "win":
           const winLink = latestRelease?.assets?.find((asset: any) =>
-            asset.name.toString().includes("setup.exe")
+            asset.name.toString().includes("setup-x64.exe")
           )?.browser_download_url;
           if (winLink) {
             downloads.push({
