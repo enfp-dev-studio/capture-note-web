@@ -29,37 +29,71 @@ export const getPlatform = (): OSType => {
     typeof window !== "undefined" ? window.navigator.userAgent : "";
 
   if (userAgent.includes("Windows")) {
-    if (
-      userAgent.indexOf("Win64") !== -1 ||
-      userAgent.indexOf("x64") !== -1
-    ) {
+    if (userAgent.indexOf("Win64") !== -1 || userAgent.indexOf("x64") !== -1) {
       console.log("Windows 64-bit");
       return "win";
     }
   } else if (userAgent.includes("Mac OS X")) {
-    if (userAgent.indexOf("Intel") !== -1) {
-      return "mac-x64";
-    } else {
-      // else if (userAgent.indexOf('Arm') !== -1) {
-      return "mac-arm";
-      // }
-    }
+    return "mac";
   }
   return "other";
 };
 
 const Home = (props: Props) => {
   const router = useRouter();
+  const [downloads, setDownloades] = React.useState<
+    { title: string; link: string }[]
+  >([]);
   const { t } = useTranslation("home");
-  const [platform, setPlatform] = React.useState<OSType>("other");
-  const [downloadTitle, setDownloadTitle] = React.useState("");
   useEffect(() => {
-    isSupportedOS()
-      ? setDownloadTitle("Download for " + getOSString())
-      : setDownloadTitle("Unsupported OS");
-    setPlatform(getPlatform());
+    const getDownloads = async () => {
+      let latestRelease = await getLatestRelease();
+      latestRelease?.assets?.filter((asset: any) => {
+        if (asset.name.toString().includes("blockmap")) {
+          return asset.browser_download_url;
+        }
+      });
+      const platform = getPlatform();
+      let downloads = [];
+      switch (platform) {
+        case "win":
+          const winLink = latestRelease?.assets?.find((asset: any) =>
+            asset.name.toString().includes("setup.exe")
+          )?.browser_download_url;
+          if (winLink) {
+            downloads.push({
+              title: "Download Windows 64-bit",
+              link: winLink,
+            });
+          }
+          break;
+        case "mac":
+          const arm64Link = latestRelease?.assets?.find((asset: any) =>
+            asset.name.toString().includes("arm64.dmg")
+          )?.browser_download_url;
+          if (arm64Link)
+            downloads.push({
+              title: "Mac OS X (Apple Silicon)",
+              link: arm64Link,
+            });
+          const x64Link = latestRelease?.assets?.find((asset: any) =>
+            asset.name.toString().includes("x64.dmg")
+          )?.browser_download_url;
+          if (x64Link) {
+            downloads.push({
+              title: "Mac OS X (Intel)",
+              link: x64Link,
+            });
+          }
+          break;
+        default:
+          alert("Unsupported OS");
+      }
+      console.log(downloads);
+      setDownloades(downloads);
+    };
+    getDownloads();
   }, []);
-
 
   const getLatestRelease = async (): Promise<any> => {
     try {
@@ -70,54 +104,6 @@ const Home = (props: Props) => {
       return data;
     } catch (error) {
       console.error(error);
-    }
-  };
-
-  const getDownloadLink = async (): Promise<string | null> => {
-    let latestRelease = await getLatestRelease();
-    latestRelease?.assets?.filter((asset: any) => {
-      if (asset.name.toString().includes("blockmap")) {
-        return asset.browser_download_url;
-      }
-    });
-    const platform = getPlatform();
-    let link = "";
-    switch (platform) {
-      case "win":
-        link = latestRelease?.assets?.find((asset: any) =>
-          asset.name.toString().includes("setup.exe")
-        )?.browser_download_url;
-        break;
-      case "mac-arm":
-        link = latestRelease?.assets?.find((asset: any) =>
-          asset.name.toString().includes("arm64.dmg")
-        )?.browser_download_url;
-        break;
-      case "mac-x64":
-        link = latestRelease?.assets?.find((asset: any) =>
-          asset.name.toString().includes("x64.dmg")
-        )?.browser_download_url;
-        break;
-      default:
-        alert("Unsupported OS");
-    }
-    return link;
-  };
-
-  const isSupportedOS = () => {
-    const userAgent =
-      typeof window !== "undefined" ? window.navigator.userAgent : "";
-    return userAgent.includes("Windows") || userAgent.includes("Mac OS X");
-  };
-
-  const getOSString = () => {
-    const userAgent =
-      typeof window !== "undefined" ? window.navigator.userAgent : "";
-
-    if (userAgent.includes("Windows")) {
-      return "Windows";
-    } else if (userAgent.includes("Mac OS X")) {
-      return "Mac OS X";
     }
   };
 
@@ -132,18 +118,20 @@ const Home = (props: Props) => {
             {t("h1-p")}
           </p>
         </div>
-        <div className="flex justify-center mt-8">
-          <Button
-            onClick={() => {
-              getDownloadLink().then((link) => {
-                if (link) {
-                  router.push(link);
-                }
-              });
-            }}
-          >
-            {downloadTitle}
-          </Button>
+        <div className="flex flex-row justify-center mt-8 space-x-4">
+          {downloads?.map((download) => {
+            return (
+              <Button
+                minWidth="16rem"
+                key={download.title}
+                onClick={() => {
+                  router.push(download.link);
+                }}
+              >
+                {download.title}
+              </Button>
+            );
+          })}
         </div>
       </div>
       <div className="container mt-24 mx-auto">

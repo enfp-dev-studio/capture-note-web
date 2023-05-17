@@ -1,2 +1,2 @@
-type OSType = "mac-x64" | "mac-arm" | "win" | "other";
+type OSType = "mac" | "win" | "other";
 export default OSType;

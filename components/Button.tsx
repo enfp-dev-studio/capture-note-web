@@ -2,6 +2,7 @@ import React from "react";
 
 type Props = {
   onClick: () => void;
+  minWidth?: string;
   children: React.ReactNode;
 };
 
@@ -13,6 +14,9 @@ const Button = (props: Props) => {
         onClick={props.onClick}
         type="button"
         className="inline-block px-6 py-2.5 bg-secondary text-accent auto-center leading-12 leading-tight rounded shadow-md hover:shadow-lg  focus:shadow-lg focus:outline-none active:shadow-lg transition hover:opacity-90 duration-150 ease-in-out"
+        style={{
+          minWidth: props.minWidth ? props.minWidth : "auto",
+        }}
       >
         {props.children}
       </button>
