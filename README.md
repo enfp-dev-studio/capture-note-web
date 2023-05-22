@@ -1,34 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align=center><img src='https://github.com/enfp-dev-studio/bitcat/assets/57121116/a2d3c4ce-006b-4726-b24f-010433964185' width='64'></p>
 
-## Getting Started
+<h1 align="center">Capture Note</h1>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This repository is the official GitHub repository for the Capture Note website. Capture Note can be downloaded from the website linked below.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Features
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **Quickly create image notes**: Capture Note allows you to create an image note of your screen at any time, whether you're watching a video, browsing the web, or playing a game (source).
+- **Annotate your screenshots with ease**: With Capture Note, you can add notes, comments, and other annotations to your screenshot. You can place them wherever you like and customize the style to make them stand out (source).
+- **Save or share your annotated screenshots**: Once you've finished editing your note, you can save it as an image file or copy it to the clipboard for easy sharing (source).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Download
 
-## Learn More
+Capture Note can be downloaded from [here](https://capture-note.enfpdev.com). 
 
-To learn more about Next.js, take a look at the following resources:
+## Issues
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you encounter any issues with Capture Note, please create an issue in this repository, or reach out to us via email or Discord. We will do our best to address your concerns.
